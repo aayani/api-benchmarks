@@ -1,0 +1,10 @@
+{
+  "name": "koa",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
+}

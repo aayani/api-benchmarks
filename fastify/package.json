@@ -1,0 +1,10 @@
+{
+  "name": "fastify",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fastify": "^2.13.0"
+  }
+}
