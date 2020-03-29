@@ -5,7 +5,7 @@ const port = Number(process.env.PORT) || 3000;
 
 app.use(ctx => {
   if (ctx.url === "/") {
-    ctx.body = "Welcome to koa!";
+    ctx.body = "Hello world from koa!";
   } else {
     ctx.status = 404;
     ctx.body = `Cannot ${ctx.method} ${ctx.url}`;
@@ -13,5 +13,5 @@ app.use(ctx => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀  API running at http://localhost:${port}`);
+  console.log(`🚀  Server running at http://localhost:${port}`);
 });

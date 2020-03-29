@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res
     .status(200)
     .type("txt")
-    .send("Welcome to express!");
+    .send("Hello world from express!");
 });
 
 app.use((req, res) => {
@@ -20,5 +20,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀  API running at http://localhost:${port}`);
+  console.log(`🚀  Server running at http://localhost:${port}`);
 });

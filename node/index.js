@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   if (req.url === "/") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain; charset=utf-8");
-    res.end("Welcome to node!");
+    res.end("Hello world from node!");
   } else {
     res.statusCode = 404;
     res.setHeader("Content-Type", "text/plain; charset=utf-8");
@@ -15,5 +15,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`🚀  API running at http://localhost:${port}`);
+  console.log(`🚀  Server running at http://localhost:${port}`);
 });

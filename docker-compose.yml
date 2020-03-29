@@ -4,63 +4,29 @@ services:
   express:
     build: ./express
     image: api-benchmarks/express
-    environment:
-      PORT: 3000
     ports:
       - 3000:3000
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 512M
-        reservations:
-          cpus: "0.2"
-          memory: 256M
+
+  flask:
+    build: ./flask
+    image: api-benchmarks/flask
+    ports:
+      - 3001:5000
 
   fastify:
     build: ./fastify
     image: api-benchmarks/fastify
-    environment:
-      PORT: 3001
     ports:
-      - 3001:3001
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 512M
-        reservations:
-          cpus: "0.2"
-          memory: 256M
+      - 3002:3000
 
   koa:
     build: ./koa
     image: api-benchmarks/koa
-    environment:
-      PORT: 3002
     ports:
-      - 3002:3002
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 512M
-        reservations:
-          cpus: "0.2"
-          memory: 256M
+      - 3003:3000
 
   node:
     build: ./node
     image: api-benchmarks/node
-    environment:
-      PORT: 3003
     ports:
-      - 3003:3003
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 512M
-        reservations:
-          cpus: "0.2"
-          memory: 256M
+      - 3004:3000

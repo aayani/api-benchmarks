@@ -4,7 +4,7 @@ const app = fastify();
 const port = Number(process.env.PORT) || 3000;
 
 app.get("/", (request, reply) => {
-  reply.send("Welcome to fastify!");
+  reply.send("Hello world from fastify!");
 });
 
 app.setNotFoundHandler((request, reply) => {
@@ -12,5 +12,5 @@ app.setNotFoundHandler((request, reply) => {
 });
 
 app.listen(port, "0.0.0.0", () => {
-  console.log(`🚀  API running at http://localhost:${port}`);
+  console.log(`🚀  Server running at http://localhost:${port}`);
 });
